@@ -13,6 +13,10 @@
 		959C5105254D77C300DB6699 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959C5104254D77C300DB6699 /* Assets.xcassets */; };
 		959C5108254D77C300DB6699 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959C5107254D77C300DB6699 /* Preview Assets.xcassets */; };
 		959C510B254D77C300DB6699 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959C5109254D77C300DB6699 /* LaunchScreen.storyboard */; };
+		959C5119254D822400DB6699 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C5118254D822400DB6699 /* NetworkManager.swift */; };
+		959C511C254D86FD00DB6699 /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C511B254D86FD00DB6699 /* PostData.swift */; };
+		959C5120254D969900DB6699 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C511F254D969900DB6699 /* DetailView.swift */; };
+		959C5124254D99EB00DB6699 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959C5123254D99EB00DB6699 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,11 @@
 		959C5107254D77C300DB6699 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		959C510A254D77C300DB6699 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		959C510C254D77C300DB6699 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959C5118254D822400DB6699 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		959C511B254D86FD00DB6699 /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		959C511F254D969900DB6699 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		959C5123254D99EB00DB6699 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		959C5126254D9C8F00DB6699 /* HackNews SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "HackNews SwiftUI.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +65,11 @@
 		959C50FD254D77BE00DB6699 /* HackNews SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				959C5126254D9C8F00DB6699 /* HackNews SwiftUI.entitlements */,
 				959C50FE254D77BE00DB6699 /* AppDelegate.swift */,
 				959C5100254D77BE00DB6699 /* SceneDelegate.swift */,
-				959C5102254D77BE00DB6699 /* ContentView.swift */,
+				959C511E254D966C00DB6699 /* Views */,
+				959C5113254D817C00DB6699 /* Models */,
 				959C5104254D77C300DB6699 /* Assets.xcassets */,
 				959C5109254D77C300DB6699 /* LaunchScreen.storyboard */,
 				959C510C254D77C300DB6699 /* Info.plist */,
@@ -73,6 +84,25 @@
 				959C5107254D77C300DB6699 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		959C5113254D817C00DB6699 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				959C5118254D822400DB6699 /* NetworkManager.swift */,
+				959C511B254D86FD00DB6699 /* PostData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		959C511E254D966C00DB6699 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				959C5102254D77BE00DB6699 /* ContentView.swift */,
+				959C511F254D969900DB6699 /* DetailView.swift */,
+				959C5123254D99EB00DB6699 /* WebView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +175,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959C511C254D86FD00DB6699 /* PostData.swift in Sources */,
+				959C5120254D969900DB6699 /* DetailView.swift in Sources */,
+				959C5119254D822400DB6699 /* NetworkManager.swift in Sources */,
 				959C50FF254D77BE00DB6699 /* AppDelegate.swift in Sources */,
 				959C5101254D77BE00DB6699 /* SceneDelegate.swift in Sources */,
 				959C5103254D77BE00DB6699 /* ContentView.swift in Sources */,
+				959C5124254D99EB00DB6699 /* WebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +320,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HackNews SwiftUI/HackNews SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackNews SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 42G5T64Y2R;
@@ -297,6 +332,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AnastasiyaUlitina.HackNews-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "HackNews SwiftUI/HackNews SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HackNews SwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = 42G5T64Y2R;
@@ -318,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "AnastasiyaUlitina.HackNews-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
